@@ -1,256 +1,230 @@
-$<!doctype html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethan Phillips</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ethan Phillips | Software, Test &amp; Integration</title>
+<meta name="description" content="Ethan Phillips, CS senior at NDSU. C++ on flight displays at Dynon Avionics, plus the simulators and test tools around them. Graduating December 2026, open to relocating.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230a0a0a'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='%23f1f0eb'%3EEP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<div class="shell">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body class="text-slate-200 main-font bg-slate-50">
-    <div
-      class="max-w-3xl mx-auto text-left px-6 py-16 text-black divide-y divide-gray-200"
-    >
-      <header class="mb-10">
-        <div class="flex items-center gap-4 mb-3">
-          <img
-            src="images/headshot.jpg"
-            alt="Ethan Phillips headshot"
-            class="w-24 h-24 rounded-full object-cover ring-2 ring-slate-300 ring-offset-2 ring-offset-slate-50"
-          />
-          <h1 class="text-5xl font-bold">Ethan Phillips</h1>
-        </div>
-
-        <p class="text-xl mb-1">Software Engineer</p>
-        <p class="text-sm text-gray-500 mb-3">
-          <i class="fas fa-map-marker-alt mr-1"></i>Fargo, ND · Open to Relocating
-        </p>
-
-        <a
-          href="https://docs.google.com/document/d/1BfpRlP_Sl27fozjAe8JsstnJqhps6gFUvqYwgx23ddA/edit?usp=sharing"
-          target="_blank"
-          class="resume-link mb-6"
-        >
-          View Resume
-        </a>
-
-        <p class="text-md mb-4">
-          I'm a Computer Science student at
-          <a
-            href="https://www.ndsu.edu/"
-            target="_blank"
-            class="inline-link inline-link-green"
-          >North Dakota State University</a>,
-          graduating December 2026. I'm drawn to problems I don't fully understand yet. There's something satisfying about starting confused and slowly building understanding until everything clicks. That drive is what pulled me toward embedded systems and backend work, where I get to understand how things work at every level.
-        </p>
-
-        <p class="text-md mb-4">
-          Currently, I'm a Software Engineering Intern at
-          <a
-            href="https://dynonavionics.com/home.php"
-            target="_blank"
-            class="inline-link inline-link-blue"
-          >Dynon Avionics</a>
-          where I work to help develop features for the SkyView HDX. Prior to
-          Dynon, I worked as a Digital Fabrication Lab Technician at NDSU and
-          an IT Intern for Bismarck Public Schools, both providing me with
-          collaborative work experience and opportunities to develop my
-          technical skills.
-        </p>
-
-        <p class="text-md mb-4">
-          Outside of work, you can usually find me climbing, longboarding,
-          playing guitar, or learning Esperanto. I also serve as the treasurer
-          for the NDSU Travel And Adventure Club, where I help organize trips
-          and events for students.
-        </p>
-
-        <div class="flex gap-4 mb-6">
-          <div class="flex gap-6 text-2xl mb-6">
-            <a
-              href="https://github.com/ethan-phillips26"
-              target="_blank"
-              class="text-gray-500 hover:text-black transform hover:-rotate-12 transition duration-200"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/ethan-phillips27/"
-              target="_blank"
-              class="text-gray-500 hover:text-blue-600 transform hover:-rotate-12 transition duration-200"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-
-            <a
-              href="mailto:ethan.phillips.dev@gmail.com"
-              class="text-gray-500 hover:text-red-500 transform hover:-rotate-12 transition duration-200"
-            >
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </header>
-
-      <div class="mb-10">
-        <h2 class="text-2xl font-bold mt-5 mb-5 section-header">Education</h2>
-
-        <div class="entry-card fade-in">
-          <p class="text-sm text-gray-500">August 2024 — December 2026</p>
-          <p class="font-medium">B.S. Computer Science · North Dakota State University</p>
-          <p class="text-sm text-gray-600 mt-1">
-            Fargo, ND · GPA: 4.0 · Dean's List 3/3 Semesters
-          </p>
-          <p class="text-sm text-gray-500 mt-2">Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Probability & Statistics, Algorithm Analysis, Theoretical Computer Science, Database Systems</p>
-        </div>
+<!-- ============ SIDEBAR ============ -->
+<aside class="side" id="side">
+  <div class="side-top">
+    <div class="who-wrap">
+      <button class="avatar" type="button" data-go="top" aria-label="Ethan Phillips, scroll to top"><img src="images/headshot.jpg" alt="" width="120" height="120"></button>
+      <div class="who">
+        <span class="nm" data-blur>Ethan Phillips</span>
       </div>
-
-      <div class="mb-10">
-        <h2 class="text-2xl font-bold mt-5 mb-5 section-header">Experience</h2>
-
-        <div class="space-y-10">
-          <div class="entry-card fade-in">
-            <p class="text-sm text-gray-500">March 2025 — Present</p>
-            <p class="font-medium">
-              Software Engineering Intern · Dynon Avionics
-            </p>
-            <p class="text-sm text-gray-600 mt-1">
-              Develop and maintain safety-critical avionics features for the SkyView HDX flight display in C++ on Linux. Built a Qt-based instrument simulator to enable hardware-independent testing, and contribute to containerized build and deployment workflows in an Agile environment.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <a href="https://isocpp.org/" target="_blank" class="skill-tag">C++</a>
-              <a href="https://www.kernel.org/" target="_blank" class="skill-tag">Linux</a>
-              <a href="https://www.docker.com/" target="_blank" class="skill-tag">Docker</a>
-              <a href="https://www.gnu.org/software/make/" target="_blank" class="skill-tag">Make</a>
-              <a href="https://www.sourceware.org/gdb/" target="_blank" class="skill-tag">GDB</a>
-              <a href="https://www.qt.io/" target="_blank" class="skill-tag">Qt</a>
-            </div>
-          </div>
-
-          <div class="entry-card fade-in">
-            <p class="text-sm text-gray-500">September 2024 - March 2025</p>
-            <p class="font-medium">
-              Digital Fabrication Lab Technician · North Dakota State University
-            </p>
-            <p class="text-sm text-gray-600 mt-1">
-              Supported students and faculty in operating 3D printers, resin printers, and laser engravers, troubleshooting hardware and software issues to minimize equipment downtime.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <a href="https://www.prusa3d.com/" target="_blank" class="skill-tag">3D Printing</a>
-              <a href="https://www.ulsinc.com/" target="_blank" class="skill-tag">Laser Engraving</a>
-            </div>
-          </div>
-
-          <div class="entry-card fade-in">
-            <p class="text-sm text-gray-500">September 2024 - March 2025</p>
-            <p class="font-medium">
-              Information Technology Intern · Bismarck Public Schools
-            </p>
-            <p class="text-sm text-gray-600 mt-1">
-              Deployed and configured AV equipment across classrooms at Century High School, including projectors and ceiling speakers. Diagnosed and repaired laptops district-wide, providing hardware and software support for students and staff across the Century feeder schools.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <span class="skill-tag">Troubleshooting</span>
-              <span class="skill-tag">Communication</span>
-              <span class="skill-tag">Collaboration</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-10">
-        <h2 class="text-2xl font-bold mt-5 mb-5 section-header">Projects</h2>
-
-        <div class="space-y-10">
-          <div class="entry-card fade-in">
-            <p class="text-sm text-gray-500">2025 — Present</p>
-            <p class="font-medium">
-              <a
-                href="https://github.com/ethan-phillips26/InkSlate"
-                target="_blank"
-                class="inline-link inline-link-purple"
-              >InkSlate</a>
-              · E-Ink Smart Notification Device <span class="in-progress">In Progress</span>
-            </p>
-            <p class="text-sm text-gray-600 mt-1">
-              Designing and building a low-power IoT notification device from the ground up — including custom PCB layout in KiCad, embedded firmware in C, and wireless data syncing to an ESP32 microcontroller.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" class="skill-tag">ESP32</a>
-              <a href="https://en.cppreference.com/w/c" target="_blank" class="skill-tag">C</a>
-            </div>
-          </div>
-
-          <div class="entry-card fade-in">
-            <p class="text-sm text-gray-500">2026 - Present</p>
-            <p class="font-medium">
-              <a class="text-purple-700"> AI Power Grid Design Tool </a>
-              · NDSU Capstone Project <span class="in-progress">In Progress</span>
-            </p>
-            <p class="text-sm text-gray-600 mt-1">
-              Architecting the database layer and backend services for an AI-powered electrical grid modeling tool. Implemented a RAG pipeline using LangGraph and the Claude API with pgvector for semantic search, enabling engineers to query infrastructure data in natural language.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <a href="https://www.python.org/" target="_blank" class="skill-tag">Python</a>
-              <a href="https://www.postgresql.org/" target="_blank" class="skill-tag">PostgreSQL</a>
-              <a href="https://github.com/pgvector/pgvector" target="_blank" class="skill-tag">pgvector</a>
-              <a href="https://www.langchain.com/langgraph" target="_blank" class="skill-tag">LangGraph</a>
-              <a href="https://www.anthropic.com/api" target="_blank" class="skill-tag">Claude API</a>
-              <a href="https://fastapi.tiangolo.com/" target="_blank" class="skill-tag">FastAPI</a>
-              <a href="https://gofastmcp.com/getting-started/welcome" target="_blank" class="skill-tag">FastMCP</a>
-              <a href="https://react.dev/" target="_blank" class="skill-tag">React</a>
-            </div>
-          </div>
-
-          <div class="entry-card fade-in">
-            <p class="text-sm text-gray-500">2025</p>
-            <p class="font-medium">
-              <a
-                href="https://github.com/ethan-phillips26/studyBuddies"
-                target="_blank"
-                class="inline-link inline-link-purple"
-                >StudyBuddies</a
-              >
-              · Study Partner Matching Web Application
-            </p>
-            <p class="text-sm text-gray-600 mt-1">
-              Built a full-stack study partner matching platform with Angular, Django, and Firebase. Designed the matching algorithm based on course schedules and study habits, with real-time data sync and user authentication.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              <a href="https://angular.dev/" target="_blank" class="skill-tag">Angular</a>
-              <a href="https://www.djangoproject.com/" target="_blank" class="skill-tag">Django</a>
-              <a href="https://firebase.google.com/" target="_blank" class="skill-tag">Firebase</a>
-              <a href="https://www.typescriptlang.org/" target="_blank" class="skill-tag">TypeScript</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer class="text-center text-slate-400 text-sm py-4">
-        <p>© <span id="year"></span> Ethan Phillips</p>
-      </footer>
-      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </div>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    <button class="icon-btn collapse" id="collapse" type="button" aria-label="Collapse sidebar" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path class="chev" d="M9 4v16M14 9l-2 3 2 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <a class="talk-mini" href="mailto:ethan.phillips.dev@gmail.com">Get in touch</a>
+    <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
 
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-  </script>
-  </body>
+  <div class="menu-wrap" id="menu">
+    <nav class="menu" aria-label="Sections">
+      <a class="item" href="#top" data-key="1"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lab">Home</span><kbd>1</kbd></a>
+      <a class="item" href="#experience" data-key="2"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lab">Experience</span><kbd>2</kbd></a>
+      <a class="item" href="#projects" data-key="3"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4" width="19" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lab">Projects</span><kbd>3</kbd></a>
+      <a class="item" href="#toolbox" data-key="4"><svg viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.2-.4-.4-2.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="lab">Toolbox</span><kbd>4</kbd></a>
+      <a class="item" href="#about" data-key="5"><svg viewBox="0 0 24 24" fill="none"><path d="m3 19 6-10 4 6 2.5-3.5L21 19z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="lab">Off the clock</span><kbd>5</kbd></a>
+      <a class="item" href="#connect" data-key="6"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 7 8.5 6 8.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lab">Connect</span><kbd>6</kbd></a>
+    </nav>
+
+    <nav class="menu" aria-label="Links">
+      <a class="item" href="https://www.linkedin.com/in/ethan-phillips27" target="_blank" rel="noopener" data-key="7"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V16M8 7.8v.1M12 16v-3.2a2.3 2.3 0 0 1 4.6 0V16M12 10.5V16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lab">LinkedIn</span><kbd>7</kbd></a>
+      <a class="item" href="https://github.com/ethan-phillips26" target="_blank" rel="noopener" data-key="8"><svg viewBox="0 0 24 24" fill="none"><path d="M9 19c-4 1.2-4-2-5.5-2.5M14.5 21v-3.2a2.8 2.8 0 0 0-.8-2.2c2.700-.3 5.300-1.300 5.300-5.800a4.500 4.500 0 0 0-1.200-3.100 4.200 4.200 0 0 0-.1-3.100s-1-.3-3.300 1.200a11.300 11.300 0 0 0-6 0C6.100 3.900 5.100 4.200 5.100 4.200a4.200 4.200 0 0 0-.1 3.100A4.500 4.500 0 0 0 3.800 10.400c0 4.500 2.600 5.500 5.300 5.800a2.800 2.800 0 0 0-.8 2.200V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lab">GitHub</span><kbd>8</kbd></a>
+      <a class="item" href="https://docs.google.com/document/d/1BfpRlP_Sl27fozjAe8JsstnJqhps6gFUvqYwgx23ddA/edit" target="_blank" rel="noopener" data-key="9"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lab">Resume</span><kbd>9</kbd></a>
+    </nav>
+
+    <a class="talk" href="mailto:ethan.phillips.dev@gmail.com"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 7 8.5 6 8.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lab">Get in touch</span></a>
+  </div>
+</aside>
+
+<!-- ============ MAIN ============ -->
+<main class="main" id="main">
+
+  <!-- HOME -->
+  <section class="hero" id="top">
+    <div class="grid-wrap" aria-hidden="true"><div class="grid" id="grid"></div></div>
+    <div class="hero-in">
+      <h1 data-blur>Ethan Phillips. Test, integration and software for aerospace.</h1>
+      <p class="sub" data-blur>I'm a computer science student at NDSU, and I write C++ on Linux for the SkyView HDX flight display at Dynon Avionics. I graduate in December 2026 and I'm looking for full-time work in test, integration or software engineering, ideally in aerospace and aviation. I'm happy to relocate.</p>
+      <div class="pills" data-blur>
+        <span class="pill">Fargo, ND</span>
+        <span class="pill">Open to relocating</span>
+        <span class="pill">GPA 3.95</span>
+      </div>
+      <div class="cta" data-blur>
+        <a class="btn solid" href="mailto:ethan.phillips.dev@gmail.com">Email me</a>
+        <a class="btn line" href="https://docs.google.com/document/d/1BfpRlP_Sl27fozjAe8JsstnJqhps6gFUvqYwgx23ddA/edit" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule col" aria-hidden="true"><i></i><b></b><i></i></div>
+
+  <!-- EXPERIENCE -->
+  <section class="block" id="experience">
+    <div class="col">
+      <h2 class="sec">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="av"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 4c2 0 3.200 2.400 3.200 5.600V24l22 13.200v5.200L35.200 36v14l7 4.400v4.400L32 56.400 21.800 59.600v-4.400l7-4.400V36L6.800 42.400v-5.200l22-13.200V9.600C28.800 6.400 30 4 32 4z" stroke="currentColor" stroke-width="3.600" stroke-linejoin="round"/></svg></span>
+          <div class="tl-body">
+            <div class="tl-head"><h3>Software Engineer Intern, Dynon Avionics</h3><span class="date">Mar 2025 – present</span></div>
+            <p>Dynon builds avionics for experimental and certified light aircraft. I work on features for the SkyView HDX flight display, writing C++ that runs on Linux.</p>
+            <ul class="bul">
+              <li>Developed IFR (Instrument Flight Rules) features for the SkyView HDX flight display in C++ on Linux.</li>
+              <li>Helped build and debug a parser for an SBAS receiver, including checksum computation and DLE-escape logic.</li>
+              <li>Built a Qt-based SBAS GPS simulator for repeatable testing of specific flight scenarios, covering ~50% of the IFR system verification plan.</li>
+              <li>Created internal engineering tools, including a navigation database mining tool and a display latency measurement tool used to verify system requirements.</li>
+              <li>Tasked with giving customers access to the Linux-based SkyView app, designed and prototyped two approaches: a custom WSL distribution that runs the app natively on Windows, and a web application that provisions on-demand Docker instances and streams them via noVNC.</li>
+              <li>Executed ~33% of the IFR system verification plan as part of a three-person team led by the Test Engineer.</li>
+            </ul>
+            <ul class="tags"><li>C++</li><li>Linux</li><li>Qt</li><li>Docker</li><li>GDB</li><li>Jira</li></ul>
+          </div>
+        </li>
+        <li>
+          <span class="av"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 9.500 12 4.500l10 5-10 5zM6 12v4.500c0 1.400 2.700 2.800 6 2.800s6-1.400 6-2.800V12M22 9.500v5.500" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="tl-body">
+            <div class="tl-head"><h3>B.S. Computer Science, North Dakota State University</h3><span class="date">Expected Dec 2026</span></div>
+            <p>GPA 3.95. Dean's List every semester. Treasurer of the Travel and Adventure Club, and in the NDSU Climbing Club.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="rule col" aria-hidden="true"><i></i><b></b><i></i></div>
+
+  <!-- PROJECTS -->
+  <section class="block" id="projects">
+    <div class="col">
+      <h2 class="sec">Projects</h2>
+      <div class="cards">
+
+        <article class="card feat">
+          <button class="shot" type="button" data-zoom aria-label="Enlarge screenshot"><img src="images/substation.jpg" width="2000" height="1075" alt="The substation design assistant: a chat on the left and the generated single-line diagram on the right, with a utility source, two 115/34.5 kV transformers, a bus tie and four feeders" loading="lazy"><span class="zoom-hint" aria-hidden="true">Click to enlarge</span></button>
+          <div class="card-body">
+            <div class="card-head"><h3>AI Substation Design System</h3><span class="meta">NDSU capstone · team of 4 · 2026</span></div>
+            <p>An AI-powered tool for electrical substation single-line diagrams, designed to help electrical engineers in the early design phase. Built with the Ulteig software engineering team as a full-stack web application that can be deployed to their employees.</p>
+            <p>I developed the RAG architecture, the database architecture and the frontend design. We ran Scrum the whole way through, with three other group members.</p>
+            <ul class="tags"><li>LLMs</li><li>RAG</li><li>Python</li><li>PostgreSQL</li><li>pgvector</li><li>LangGraph</li><li>Claude API</li><li>FastAPI</li><li>React</li></ul>
+          </div>
+        </article>
+
+        <article class="card feat">
+          <button class="shot" type="button" data-zoom aria-label="Enlarge screenshot"><img src="images/whiteboard.jpg" width="2000" height="1072" alt="Whiteboard demo: a month calendar beside a list of upcoming deadlines for five courses" loading="lazy"><span class="zoom-hint" aria-hidden="true">Click to enlarge</span></button>
+          <div class="card-body">
+            <div class="card-head"><h3>Whiteboard</h3><span class="meta">web · 2026</span></div>
+            <p>A read-only front end for Blackboard Learn. Due dates, grades, announcements and assignment sheets each live on a different page for every course, so Whiteboard puts them on one screen: every deadline across every course, a calendar, grades that account for category weights, and a search box that covers assignments, announcements and the text inside handouts.</p>
+            <p>It runs entirely in the browser. A small Manifest V3 extension is the only part that ever touches Blackboard, and it only sends GET requests to the one server you connect. There's also a Claude tab that uses the Claude Code already on your computer.</p>
+            <p>Unofficial, and not affiliated with Anthology.</p>
+            <ul class="tags"><li>React</li><li>IndexedDB</li><li>Manifest V3</li><li>Vite</li><li>GitHub Actions</li></ul>
+            <p class="links"><a class="arr" href="https://ethanphillips.dev/whiteboard/?demo" target="_blank" rel="noopener">Try it</a><a class="arr" href="https://github.com/ethan-phillips26/whiteboard" target="_blank" rel="noopener">GitHub</a></p>
+          </div>
+        </article>
+
+        <article class="card feat">
+          <div class="card-body">
+            <div class="card-head"><h3>DMR Hearings</h3><span class="meta">search · 2026</span></div>
+            <p>Search across five years of North Dakota oil and gas hearings, where every result links to the exact second in the recording. The Industrial Commission streams every hearing to YouTube, which adds up to hundreds of hours of testimony, and the only way to find anything in it was to scrub through the videos.</p>
+            <p>I pull the auto-captions for every hearing since December 2021 (156 so far), split them into cases, and use the official dockets to fix the names the captions get wrong. Search runs keyword and embedding queries over overlapping 75-second chunks and merges them with reciprocal rank fusion, all in one SQLite file.</p>
+            <p>I use it through an MCP server with five tools, so Claude can search, read around the best hits and cite the case number, date and timestamp.</p>
+            <ul class="tags"><li>Python</li><li>SQLite</li><li>FTS5</li><li>sqlite-vec</li><li>fastembed</li><li>yt-dlp</li><li>pypdf</li><li>MCP</li></ul>
+          </div>
+        </article>
+
+        <article class="card sm">
+          <a class="card-link" href="https://github.com/ethan-phillips26/InkSlate" target="_blank" rel="noopener" aria-label="InkSlate on GitHub"></a>
+          <div class="card-body">
+            <div class="card-head"><h3>InkSlate</h3><span class="meta">Hardware · in progress</span></div>
+            <p>A low-power e-ink notification display I'm designing from the board up. Custom PCB in KiCad, firmware in C on an ESP32-S3, and notifications that reach it over Bluetooth through Apple's ANCS.</p>
+            <ul class="tags"><li>C</li><li>ESP32-S3</li><li>ESP-IDF</li><li>KiCad</li><li>BLE</li></ul>
+            <p class="links"><span>View on GitHub</span></p>
+          </div>
+        </article>
+
+        <article class="card sm">
+          <a class="card-link" href="https://github.com/ethan-phillips26/studyBuddies" target="_blank" rel="noopener" aria-label="StudyBuddies on GitHub"></a>
+          <div class="card-body">
+            <div class="card-head"><h3>StudyBuddies</h3><span class="meta">CSCI 313 · team · 2025</span></div>
+            <p>A full-stack web app that matches students as study partners based on similar academic needs. I led development.</p>
+            <p>A matching algorithm pairs students by course schedule and study habits. RESTful Django services handle matching and study group creation, and Firebase handles authentication, student verification and data synchronization.</p>
+            <ul class="tags"><li>Angular</li><li>TypeScript</li><li>Django</li><li>Firebase</li></ul>
+            <p class="links"><span>View on GitHub</span></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="rule col" aria-hidden="true"><i></i><b></b><i></i></div>
+
+  <!-- TOOLBOX -->
+  <section class="block" id="toolbox">
+    <div class="col">
+      <h2 class="sec">Toolbox</h2>
+      <div class="tool-grid">
+        <div>
+          <h3>Languages</h3>
+          <ul class="tags big"><li>C++</li><li>C</li><li>Java</li><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li></ul>
+        </div>
+        <div>
+          <h3>Technologies</h3>
+          <ul class="tags big"><li>Angular</li><li>React</li><li>Postgres</li><li>.NET</li><li>Qt</li><li>Git</li><li>Linux</li><li>Docker</li><li>Jira</li><li>Azure DevOps</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule col" aria-hidden="true"><i></i><b></b><i></i></div>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <div class="col">
+      <h2 class="sec">Off the clock</h2>
+      <p class="lead">Outside of work I climb, run, longboard and play guitar. At NDSU I'm in the Climbing Club and I'm the treasurer of the Travel and Adventure Club.</p>
+    </div>
+  </section>
+
+  <div class="rule col" aria-hidden="true"><i></i><b></b><i></i></div>
+
+  <!-- CONNECT -->
+  <section class="block last" id="connect">
+    <div class="col">
+      <h2 class="sec big">Let's talk.</h2>
+      <p class="lead">I graduate in December 2026 and I'm looking for full-time work in test, integration or software engineering, ideally in aerospace and aviation. I'm happy to relocate. Email is the best way to reach me.</p>
+      <div class="cta">
+        <a class="btn solid" href="mailto:ethan.phillips.dev@gmail.com">ethan.phillips.dev@gmail.com</a>
+        <a class="btn line" href="https://www.linkedin.com/in/ethan-phillips27" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn line" href="https://github.com/ethan-phillips26" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn line" href="https://docs.google.com/document/d/1BfpRlP_Sl27fozjAe8JsstnJqhps6gFUvqYwgx23ddA/edit" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Screenshot"><button class="lb-x" type="button" aria-label="Close">Close</button><img alt=""></dialog>
+<script src="main.js"></script>
+</body>
 </html>
