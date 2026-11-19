@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Straight Rows | Ethan Phillips</title>
+<meta name="description" content="Detects and classifies GNSS guidance faults across a simulated tractor fleet.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="pp">
+<a class="skip" href="#main">Skip to content</a>
+<main class="pp-main" id="main">
+  <div class="pp-top"><a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All projects</a><span class="pp-count">01 / 06</span></div>
+  <header class="pp-head">
+    <div class="pp-eyebrow"><span class="pp-badge">Co-winner</span><span class="meta">Bluestaq × NDSU hackathon · 2026</span></div>
+    <h1>Straight Rows</h1>
+    <p class="pp-lede">I entered this solo in the Bluestaq &times; NDSU hackathon, built it in 24 hours, and shared first place. The organizers supplied 72 hours of synthetic 1 Hz telemetry from three GNSS-guided tractors near Casselton, ND, along with simulated space-weather and RFI feeds. The system finds each episode of degraded guidance on an unlabeled evaluation day and classifies the cause as jamming, spoofing, space weather, equipment fault or multipath. For each one it reports the affected tractors, a recommended action, a confidence score and the measurements behind the call.</p>
+    <div class="cta"><a class="btn solid" href="https://ethanphillips.dev/straight-rows-hackathon" target="_blank" rel="noopener">Try it</a><a class="btn line" href="https://github.com/ethan-phillips26/straight-rows-hackathon" target="_blank" rel="noopener">GitHub</a></div>
+  </header>
+  <img class="hero-img" src="../images/straight-rows.jpg" width="2000" height="1080" alt="The Straight Rows explorer on a jamming detection: the detection list, mean and weakest-satellite C/N0 charts with the jamming episode shaded, the field view with three tractors and the fitted jammer position, and the start of the written evidence.">
+  <dl class="pp-facts"><div><dt>Built in</dt><dd class="n">24 hours</dd><dd class="s">Solo</dd></div><div><dt>Data</dt><dd class="n">72 hours</dd><dd class="s">1 Hz telemetry</dd></div><div><dt>Evaluation day</dt><dd class="n hi">8 of 8</dd><dd class="s">40/40 on the organizers&#x27; diagnostic. No false positives.</dd></div></dl>
+    <div class="pp-body">
+    <nav class="pp-index" aria-label="On this page"><a href="#how">How it works</a><a href="#evidence">The evidence</a><a href="#results">Results</a><a href="#stack">Stack</a></nav>
+    <div class="pp-sections"><section id="how"><h2>How it works</h2><p>Each cause has its own detector, and every detector works on residuals: a tractor's signal minus the fleet median, or minus its own quiet baseline. That keeps a fleet-wide event like a storm from hiding a local fault. Jamming appears as a C/N0 drop that weakens with distance from a single source and isn't explained by scintillation. Spoofing appears as a reported position drifting out of formation while the signal looks normal. Multipath is a short dip at each north-headland pass. With only 12 labeled practice episodes to learn from, I kept every rule physical and simple enough to state in one sentence instead of fitting a model.</p></section><section id="evidence"><h2>The evidence</h2><p>Every detection comes with evidence built from measured values and timestamps, and each line states what rules out the other causes. For example, a quiet S4 index rules out space weather. For jamming, the system also estimates the jammer's position and error ellipse from how C/N0 falls off across the fleet. Confidence is set by explicit rules: each cause starts from a base score and is lowered for named conditions, such as a jammer inside a storm, and the adjustments are listed with the detection.</p></section><section id="results"><h2>Results</h2><p>Thresholds were set on the labeled days only. The evaluation day was used for baselines and nothing else. The submission scored 40/40 on the organizers' automated diagnostic, matching all 8 hidden episodes with the correct action and no false positives. Because the practice-day score is in-sample, I also ran leave-one-episode-out checks and a &plusmn;20% sweep of every threshold, and documented the known failure modes, such as two causes starting at the same moment. An interactive explorer replays all 72 hours along with each detection and its evidence.</p></section><section id="stack"><h2>Stack</h2><ul class="tags big"><li>Python</li><li>pandas</li><li>NumPy</li><li>Time series</li><li>GNSS</li></ul></section></div>
+  </div>
+<a class="pp-next" href="substation-design.html"><span><span class="pp-next-k">Next project</span><span class="pp-next-t">AI Substation Design System</span></span><svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</main>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.pp-index a'));if(!('IntersectionObserver' in window))return;
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.removeAttribute('aria-current');if(a.getAttribute('href')==='#'+x.target.id)a.setAttribute('aria-current','true')})}})},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.pp-sections section').forEach(function(s){o.observe(s)})})();
+</script>
+</body>
+</html>

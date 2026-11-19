@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudyBuddies | Ethan Phillips</title>
+<meta name="description" content="A web app that matches students as study partners based on the classes they share.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="pp">
+<a class="skip" href="#main">Skip to content</a>
+<main class="pp-main" id="main">
+  <div class="pp-top"><a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All projects</a><span class="pp-count">06 / 06</span></div>
+  <header class="pp-head">
+    <div class="pp-eyebrow"><span class="meta">CSCI 313 · team · 2025</span></div>
+    <h1>StudyBuddies</h1>
+    <p class="pp-lede">A full-stack web app that pairs students as study partners based on the classes they share. I led a team of three that built it for CSCI 313 in spring 2025.</p>
+    <div class="cta"><a class="btn solid" href="https://github.com/ethan-phillips26/studyBuddies" target="_blank" rel="noopener">GitHub</a></div>
+  </header>
+  <figure class="hero-fig"><img class="hero-img shot" src="../images/studybuddies-match.png" width="1600" height="1000" alt="The StudyBuddies match page showing a classmate's profile card with bio, strengths, weaknesses, free times and shared classes, and Skip and Like buttons"><figcaption>The match page. Each card is a classmate who shares at least one class with you; you Like or Skip.</figcaption></figure>
+  <dl class="pp-facts"><div><dt>Team</dt><dd class="n">3</dd><dd class="s">I was team leader</dd></div><div><dt>Course</dt><dd class="n">CSCI 313</dd><dd class="s">Spring 2025</dd></div><div><dt>Hosted on</dt><dd class="n">Render</dd><dd class="s">Django API. Angular is on GitHub Pages.</dd></div></dl>
+  <div class="pp-body">
+    <nav class="pp-index" aria-label="On this page"><a href="#how">How it&#x27;s built</a><a href="#scope">What changed</a><a href="#hard">What was hard</a><a href="#stack">Stack</a></nav>
+    <div class="pp-sections"><section id="how"><h2>How it&#x27;s built</h2><p>The frontend is an Angular app hosted on GitHub Pages. The backend is a set of Django REST services deployed on Render, with Firebase storing accounts and profile data and Stream providing messaging. Students sign in through NDSU&#x27;s Bison Login, so identity is verified with Duo Push instead of a confirmation email.</p><p>On the match page a student sees one classmate at a time, with their bio, strengths, weaknesses, free times and the classes they share, and chooses Like or Skip.</p></section><section id="scope"><h2>What changed</h2><p>The original design matched students on strengths, weaknesses and availability as well as classes. We ran short on time, so matching uses shared classes only, and we dropped notifications for the same reason. Profiles still collect strengths, weaknesses and free times, and they appear on each match card.</p><p>We also reworked study groups. Students create a group from a modal, join or leave other groups from the main page, and manage the groups they created on a separate page.</p></section><section id="hard"><h2>What was hard</h2><p>Getting data out of the database in the shape the frontend needed took the most time. None of us had much experience with Django, so we learned it during the project and wrote the data-access methods together.</p></section><section id="stack"><h2>Stack</h2><ul class="tags big"><li>Angular</li><li>TypeScript</li><li>Django</li><li>Firebase</li><li>Stream</li></ul></section></div>
+  </div>
+<a class="pp-next" href="straight-rows.html"><span><span class="pp-next-k">Next project</span><span class="pp-next-t">Straight Rows</span></span><svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</main>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.pp-index a'));if(!('IntersectionObserver' in window))return;
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.removeAttribute('aria-current');if(a.getAttribute('href')==='#'+x.target.id)a.setAttribute('aria-current','true')})}})},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.pp-sections section').forEach(function(s){o.observe(s)})})();
+</script>
+</body>
+</html>

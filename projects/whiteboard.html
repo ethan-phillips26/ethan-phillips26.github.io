@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whiteboard | Ethan Phillips</title>
+<meta name="description" content="A read-only dashboard for Blackboard Learn that puts deadlines, grades and announcements in one place.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="pp">
+<a class="skip" href="#main">Skip to content</a>
+<main class="pp-main" id="main">
+  <div class="pp-top"><a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All projects</a><span class="pp-count">03 / 06</span></div>
+  <header class="pp-head">
+    <div class="pp-eyebrow"><span class="meta">web · 2026</span></div>
+    <h1>Whiteboard</h1>
+    <p class="pp-lede">Blackboard Learn keeps due dates, grades, announcements and course files on separate pages for each course, so finding out what is due this week means opening every class in turn. Whiteboard brings it together in one view: upcoming deadlines across all courses, a calendar that exports to other apps, weighted grades, and search across assignments, announcements and the text of handouts you have opened.</p>
+    <div class="cta"><a class="btn solid" href="https://ethanphillips.dev/whiteboard/?demo" target="_blank" rel="noopener">Try it</a><a class="btn line" href="https://github.com/ethan-phillips26/whiteboard" target="_blank" rel="noopener">GitHub</a></div>
+  </header>
+  <img class="hero-img" src="../images/whiteboard.jpg" width="2000" height="1072" alt="Whiteboard demo: a month calendar beside a list of upcoming deadlines for five courses">
+  <dl class="pp-facts"><div><dt>Runs</dt><dd class="n">In the browser</dd><dd class="s">No server</dd></div><div><dt>Requests</dt><dd class="n">GET only</dd><dd class="s">Read-only by design</dd></div><div><dt>Stored in</dt><dd class="n hi">IndexedDB</dd><dd class="s">Nothing leaves your machine</dd></div></dl>
+    <div class="pp-body">
+    <nav class="pp-index" aria-label="On this page"><a href="#how">How it works</a><a href="#know">Grades and Claude</a><a href="#stack">Stack</a></nav>
+    <div class="pp-sections"><section id="how"><h2>How it works</h2><p>The app runs entirely in the browser and caches what it fetches in IndexedDB, so there is no server and no data leaves the user's machine. A small Manifest V3 extension for Chrome and Firefox is the only part that talks to Blackboard, using the session the browser already has. It only permits GET requests to Blackboard's REST API, so the app cannot submit or change anything.</p></section><section id="know"><h2>Grades and Claude</h2><p>Blackboard doesn't expose how much each grade category is worth, so grades are weighted by points until the user enters the percentages from the syllabus. The Claude tab connects to the user's local Claude Code install through a native messaging host. Claude runs with its built-in tools disabled and can only use tools the page provides, which read course data and let it write study notes and quizzes for the page to display. It has no file or shell access and cannot change anything in Blackboard.</p><p>Whiteboard is unofficial and not affiliated with Anthology.</p></section><section id="stack"><h2>Stack</h2><ul class="tags big"><li>React</li><li>IndexedDB</li><li>Manifest V3</li><li>Vite</li><li>GitHub Actions</li></ul></section></div>
+  </div>
+<a class="pp-next" href="dmr-hearings.html"><span><span class="pp-next-k">Next project</span><span class="pp-next-t">DMR Hearings</span></span><svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</main>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.pp-index a'));if(!('IntersectionObserver' in window))return;
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.removeAttribute('aria-current');if(a.getAttribute('href')==='#'+x.target.id)a.setAttribute('aria-current','true')})}})},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.pp-sections section').forEach(function(s){o.observe(s)})})();
+</script>
+</body>
+</html>

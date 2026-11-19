@@ -117,61 +117,36 @@
   <section class="block" id="projects">
     <div class="col">
       <h2 class="sec">Projects</h2>
-      <div class="cards">
+      <div class="pgrid">
+        <a class="ptile" href="projects/straight-rows.html">
+          <div class="art"><img src="images/straight-rows-tile.jpg" width="1620" height="1080" alt="" loading="lazy"><span class="pbadge solid">Co-winner</span><svg class="go" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="pbody"><h3>Straight Rows</h3><p class="pmeta">Bluestaq × NDSU hackathon · co-winner · 2026</p><p class="psum">A solo 24-hour hackathon entry that finds episodes of degraded GNSS guidance in tractor telemetry and classifies the cause of each one.</p><p class="pstack">Python · pandas · GNSS</p></div>
+        </a>
 
-        <article class="card feat">
-          <button class="shot" type="button" data-zoom aria-label="Enlarge screenshot"><img src="images/substation.jpg" width="2000" height="1075" alt="The substation design assistant: a chat on the left and the generated single-line diagram on the right, with a utility source, two 115/34.5 kV transformers, a bus tie and four feeders" loading="lazy"><span class="zoom-hint" aria-hidden="true">Click to enlarge</span></button>
-          <div class="card-body">
-            <div class="card-head"><h3>AI Substation Design System</h3><span class="meta">NDSU capstone · team of 4 · 2026</span></div>
-            <p>An AI-powered tool for electrical substation single-line diagrams, designed to help electrical engineers in the early design phase. Built with the Ulteig software engineering team as a full-stack web application that can be deployed to their employees.</p>
-            <p>I developed the RAG architecture, the database architecture and the frontend design. We ran Scrum the whole way through, with three other group members.</p>
-            <ul class="tags"><li>LLMs</li><li>RAG</li><li>Python</li><li>PostgreSQL</li><li>pgvector</li><li>LangGraph</li><li>Claude API</li><li>FastAPI</li><li>React</li></ul>
-          </div>
-        </article>
+        <a class="ptile" href="projects/substation-design.html">
+          <div class="art"><img src="images/substation-tile.jpg" width="1612" height="1075" alt="" loading="lazy"><svg class="go" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="pbody"><h3>AI Substation Design System</h3><p class="pmeta">NDSU capstone · team of 4 · 2026</p><p class="psum">A chat-based tool, built with Ulteig for our senior capstone, that drafts substation single-line diagrams for engineers to refine with follow-up prompts.</p><p class="pstack">RAG · LangGraph · React</p></div>
+        </a>
 
-        <article class="card feat">
-          <button class="shot" type="button" data-zoom aria-label="Enlarge screenshot"><img src="images/whiteboard.jpg" width="2000" height="1072" alt="Whiteboard demo: a month calendar beside a list of upcoming deadlines for five courses" loading="lazy"><span class="zoom-hint" aria-hidden="true">Click to enlarge</span></button>
-          <div class="card-body">
-            <div class="card-head"><h3>Whiteboard</h3><span class="meta">web · 2026</span></div>
-            <p>A read-only front end for Blackboard Learn. Due dates, grades, announcements and assignment sheets each live on a different page for every course, so Whiteboard puts them on one screen: every deadline across every course, a calendar, grades that account for category weights, and a search box that covers assignments, announcements and the text inside handouts.</p>
-            <p>It runs entirely in the browser. A small Manifest V3 extension is the only part that ever touches Blackboard, and it only sends GET requests to the one server you connect. There's also a Claude tab that uses the Claude Code already on your computer.</p>
-            <p>Unofficial, and not affiliated with Anthology.</p>
-            <ul class="tags"><li>React</li><li>IndexedDB</li><li>Manifest V3</li><li>Vite</li><li>GitHub Actions</li></ul>
-            <p class="links"><a class="arr" href="https://ethanphillips.dev/whiteboard/?demo" target="_blank" rel="noopener">Try it</a><a class="arr" href="https://github.com/ethan-phillips26/whiteboard" target="_blank" rel="noopener">GitHub</a></p>
-          </div>
-        </article>
+        <a class="ptile" href="projects/whiteboard.html">
+          <div class="art"><img src="images/whiteboard-tile.jpg" width="1263" height="842" alt="" loading="lazy"><svg class="go" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="pbody"><h3>Whiteboard</h3><p class="pmeta">web · 2026</p><p class="psum">A read-only dashboard for Blackboard Learn that brings deadlines, grades and announcements from every course into one view, with all data kept in the browser.</p><p class="pstack">React · IndexedDB · Manifest V3</p></div>
+        </a>
 
-        <article class="card feat">
-          <div class="card-body">
-            <div class="card-head"><h3>DMR Hearings</h3><span class="meta">search · 2026</span></div>
-            <p>Search across five years of North Dakota oil and gas hearings, where every result links to the exact second in the recording. The Industrial Commission streams every hearing to YouTube, which adds up to hundreds of hours of testimony, and the only way to find anything in it was to scrub through the videos.</p>
-            <p>I pull the auto-captions for every hearing since December 2021 (156 so far), split them into cases, and use the official dockets to fix the names the captions get wrong. Search runs keyword and embedding queries over overlapping 75-second chunks and merges them with reciprocal rank fusion, all in one SQLite file.</p>
-            <p>I use it through an MCP server with five tools, so Claude can search, read around the best hits and cite the case number, date and timestamp.</p>
-            <ul class="tags"><li>Python</li><li>SQLite</li><li>FTS5</li><li>sqlite-vec</li><li>fastembed</li><li>yt-dlp</li><li>pypdf</li><li>MCP</li></ul>
-          </div>
-        </article>
+        <a class="ptile" href="projects/dmr-hearings.html">
+          <div class="art"><img src="images/dmr-tile.jpg" width="1500" height="1000" alt="" loading="lazy"><svg class="go" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="pbody"><h3>DMR Hearings</h3><p class="pmeta">search · 2026</p><p class="psum">Search over every North Dakota oil and gas hearing since December 2021, with each result linked to the exact moment in the recording.</p><p class="pstack">Python · SQLite · MCP</p></div>
+        </a>
 
-        <article class="card sm">
-          <a class="card-link" href="https://github.com/ethan-phillips26/InkSlate" target="_blank" rel="noopener" aria-label="InkSlate on GitHub"></a>
-          <div class="card-body">
-            <div class="card-head"><h3>InkSlate</h3><span class="meta">Hardware · in progress</span></div>
-            <p>A low-power e-ink notification display I'm designing from the board up. Custom PCB in KiCad, firmware in C on an ESP32-S3, and notifications that reach it over Bluetooth through Apple's ANCS.</p>
-            <ul class="tags"><li>C</li><li>ESP32-S3</li><li>ESP-IDF</li><li>KiCad</li><li>BLE</li></ul>
-            <p class="links"><span>View on GitHub</span></p>
-          </div>
-        </article>
+        <a class="ptile" href="projects/inkslate.html">
+          <div class="art"><img src="images/inkslate-tile.png" width="1200" height="800" alt="" loading="lazy"><span class="pbadge">In progress</span><svg class="go" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="pbody"><h3>InkSlate</h3><p class="pmeta">Hardware · in progress</p><p class="psum">An e-ink desk display built on an ESP32-S3 that shows iPhone notifications over Bluetooth Low Energy and runs a countdown timer.</p><p class="pstack">C/C++ · ESP32-S3 · BLE</p></div>
+        </a>
 
-        <article class="card sm">
-          <a class="card-link" href="https://github.com/ethan-phillips26/studyBuddies" target="_blank" rel="noopener" aria-label="StudyBuddies on GitHub"></a>
-          <div class="card-body">
-            <div class="card-head"><h3>StudyBuddies</h3><span class="meta">CSCI 313 · team · 2025</span></div>
-            <p>A full-stack web app that matches students as study partners based on similar academic needs. I led development.</p>
-            <p>A matching algorithm pairs students by course schedule and study habits. RESTful Django services handle matching and study group creation, and Firebase handles authentication, student verification and data synchronization.</p>
-            <ul class="tags"><li>Angular</li><li>TypeScript</li><li>Django</li><li>Firebase</li></ul>
-            <p class="links"><span>View on GitHub</span></p>
-          </div>
-        </article>
-
+        <a class="ptile" href="projects/studybuddies.html">
+          <div class="art"><img src="images/studybuddies-tile.jpg" width="1200" height="800" alt="" loading="lazy"><svg class="go" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="pbody"><h3>StudyBuddies</h3><p class="pmeta">CSCI 313 · team · 2025</p><p class="psum">A full-stack web app, built by a team of three for CSCI 313, that pairs students as study partners based on the classes they share.</p><p class="pstack">Angular · Django · Firebase</p></div>
+        </a>
       </div>
     </div>
   </section>

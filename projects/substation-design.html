@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Substation Design System | Ethan Phillips</title>
+<meta name="description" content="A chat-based tool for drafting substation single-line diagrams in early design.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="pp">
+<a class="skip" href="#main">Skip to content</a>
+<main class="pp-main" id="main">
+  <div class="pp-top"><a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All projects</a><span class="pp-count">02 / 06</span></div>
+  <header class="pp-head">
+    <div class="pp-eyebrow"><span class="meta">NDSU capstone · team of 4 · 2026</span></div>
+    <h1>AI Substation Design System</h1>
+    <p class="pp-lede">Our NDSU senior capstone was a full-stack web application for Ulteig, an engineering consulting firm. An engineer describes a substation in a chat window and the application drafts a single-line diagram, which they can then refine with follow-up prompts, using project requirements and uploaded documents as context. The goal is a usable baseline design early in a project, so the client has something concrete to respond to sooner.</p>
+    
+  </header>
+  <img class="hero-img" src="../images/substation.jpg" width="2000" height="1075" alt="The substation design assistant: a chat on the left and the generated single-line diagram on the right, with a utility source, two 115/34.5 kV transformers, a bus tie and four feeders">
+  <dl class="pp-facts"><div><dt>Team</dt><dd class="n">4</dd><dd class="s">Scrum throughout</dd></div><div><dt>Built with</dt><dd class="n">Ulteig</dd><dd class="s">Software engineering team</dd></div><div><dt>My part</dt><dd class="n hi">RAG + DB</dd><dd class="s">And the frontend design</dd></div></dl>
+    <div class="pp-body">
+    <nav class="pp-index" aria-label="On this page"><a href="#role">My part</a><a href="#agent">How the agent works</a><a href="#data">Data and frontend</a><a href="#stack">Stack</a></nav>
+    <div class="pp-sections"><section id="role"><h2>My part</h2><p>I was responsible for the RAG pipeline, the database design and the frontend design. The retrieval pipeline is what lets the agent draw on a project&#x27;s requirements and uploaded documents when it drafts or changes a diagram. Our team of four worked in Scrum sprints alongside Ulteig&#x27;s software engineering team for the length of the project.</p></section><section id="agent"><h2>How the agent works</h2><p>A LangGraph agent running Claude first decides whether a request is a design change or a question about the current design. Changes go to an edit step that updates the diagram. Questions go to a step that answers from the diagram's current state. The agent reaches the design only through an MCP server built with FastMCP, so the model works with a defined set of tools rather than querying the database directly.</p></section><section id="data"><h2>Data and frontend</h2><p>Equipment, cables, buses and diagrams are modeled in SQLAlchemy on PostgreSQL, with Alembic for migrations and pgvector for document retrieval. A FastAPI backend serves the agent, and the frontend is Next.js with React and Tailwind.</p></section><section id="stack"><h2>Stack</h2><ul class="tags big"><li>LLMs</li><li>RAG</li><li>Python</li><li>PostgreSQL</li><li>pgvector</li><li>LangGraph</li><li>Claude API</li><li>FastMCP</li><li>FastAPI</li><li>Next.js</li><li>React</li></ul></section></div>
+  </div>
+<a class="pp-next" href="whiteboard.html"><span><span class="pp-next-k">Next project</span><span class="pp-next-t">Whiteboard</span></span><svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</main>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.pp-index a'));if(!('IntersectionObserver' in window))return;
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.removeAttribute('aria-current');if(a.getAttribute('href')==='#'+x.target.id)a.setAttribute('aria-current','true')})}})},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.pp-sections section').forEach(function(s){o.observe(s)})})();
+</script>
+</body>
+</html>

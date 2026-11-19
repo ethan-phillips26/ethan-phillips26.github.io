@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMR Hearings | Ethan Phillips</title>
+<meta name="description" content="Search across five years of ND oil and gas hearings, with every result linked to its moment in the recording.">
+<meta name="theme-color" content="#eef1f4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="pp">
+<a class="skip" href="#main">Skip to content</a>
+<main class="pp-main" id="main">
+  <div class="pp-top"><a class="back" href="../index.html#projects"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All projects</a><span class="pp-count">04 / 06</span></div>
+  <header class="pp-head">
+    <div class="pp-eyebrow"><span class="meta">search · 2026</span></div>
+    <h1>DMR Hearings</h1>
+    <p class="pp-lede">The North Dakota Industrial Commission streams every oil and gas hearing to YouTube, which adds up to hundreds of hours of testimony that nobody can search. This project indexes the captions of every hearing since December 2021 alongside the official dockets, splits each hearing into its individual cases, and links every result to the exact timestamp in the video.</p>
+    
+  </header>
+  <dl class="pp-facts"><div><dt>Hearings</dt><dd class="n hi">156</dd><dd class="s">Since Dec 2021</dd></div><div><dt>Cases</dt><dd class="n">2,836</dd><dd class="s">Split out and matched to dockets</dd></div><div><dt>Tools</dt><dd class="n">5</dd><dd class="s">Read-only, over MCP</dd></div></dl>
+  <div class="pp-body">
+    <nav class="pp-index" aria-label="On this page"><a href="#how">How it&#x27;s built</a><a href="#use">How I use it</a><a href="#stack">Stack</a></nav>
+    <div class="pp-sections"><section id="how"><h2>How it&#x27;s built</h2><p>A pipeline downloads each hearing's auto-captions with yt-dlp and parses the official docket PDFs with pypdf. Hearings follow a script (&quot;next case is case number&hellip;&quot;), so those phrases are used to split each hearing into individual cases. Case numbers the captions mishear are corrected against the docket, and spans that couldn't be placed with confidence are flagged.</p><p>Search combines BM25 keyword search and vector search over overlapping 75-second chunks, merged with reciprocal rank fusion. Everything lives in a single SQLite file using FTS5 and sqlite-vec, with embeddings from a small CPU model, so it runs locally with no API keys. Each chunk is embedded with its case number and applicant, which lets a search for a company find testimony that never mentions it by name.</p></section><section id="use"><h2>How I use it</h2><p>The search is exposed through an MCP server with five read-only tools. Claude can search the hearings, read the surrounding transcript, and cite the case number, hearing date and timestamp for each claim. There is also a command-line search for checking results directly. Most hearings end without a ruling, so the tools never report an outcome.</p></section><section id="stack"><h2>Stack</h2><ul class="tags big"><li>Python</li><li>SQLite</li><li>FTS5</li><li>sqlite-vec</li><li>fastembed</li><li>yt-dlp</li><li>pypdf</li><li>MCP</li></ul></section></div>
+  </div>
+<a class="pp-next" href="inkslate.html"><span><span class="pp-next-k">Next project</span><span class="pp-next-t">InkSlate</span></span><svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</main>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.pp-index a'));if(!('IntersectionObserver' in window))return;
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.removeAttribute('aria-current');if(a.getAttribute('href')==='#'+x.target.id)a.setAttribute('aria-current','true')})}})},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('.pp-sections section').forEach(function(s){o.observe(s)})})();
+</script>
+</body>
+</html>
